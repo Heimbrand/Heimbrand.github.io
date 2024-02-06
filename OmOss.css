@@ -56,7 +56,7 @@ footer.text-info div{
   
   
   .contact-section {
-    flex: 1; 
+    display: block; 
     padding: 20px; 
     width: 100%;
     padding: 20px;
