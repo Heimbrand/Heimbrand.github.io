@@ -23,25 +23,6 @@ img {
 .container h1.text-info{
     font-size:  35px;
 }
-.container h3.cat-section{
-    text-align: center;
-    
-}
-.cat-section{
-    padding: 10px;
-    border: 3px solid #1D1E2C ;
-    border-radius: 10px ;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.9) ;
-    
-}
-.cat-section-img{
-    padding: 10px;
-    border: 3px solid #1D1E2C ;
-    border-radius: 10px ;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
-    margin-bottom: 5;
-    
-}
 
 footer {
     height: 120px;
