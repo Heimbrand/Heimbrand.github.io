@@ -25,20 +25,29 @@ footer.text-info div {
 
 .container {
   display: flex;
-  flex-direction: row;
-  gap: 20px;
+  
 }
 .product-section,
 .customerCart-section,
 .addOrRemove-section {
-  flex:1;
+  flex: 1;
+  padding: 20px;
+  width: 100%;
+  border: 3px solid #1d1e2c;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+  margin-bottom: 20px;
+  margin-top: 20px;
+  height: 925px;
+  margin: 10px;
+}
+.product-card{
   padding: 20px;
   border: 3px solid #1d1e2c;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
-  height: auto;
-  width: auto;
-  margin-top: 120px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+  margin: 25px;
+  
 }
 .product-section img {
   width: 100px;

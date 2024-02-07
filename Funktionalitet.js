@@ -6,8 +6,9 @@ const services = [
 
 const myServices = document.querySelector(".product-section");
 
-for (let i = 0; i < services.length; i++) {
-  const service = services[i];
+for (const service of services) {
+
+
   const productCard = document.createElement("div");
   productCard.classList.add("product-card");
 
@@ -18,10 +19,12 @@ for (let i = 0; i < services.length; i++) {
   productName.textContent = service.service;
 
   const productPrice = document.createElement("p");
-  productPrice.textContent = service.price;
+  productPrice.textContent = service.price + ":-";
 
   productCard.appendChild(productImage);
   productCard.appendChild(productName);
   productCard.appendChild(productPrice);
   myServices.appendChild(productCard);
+
+
 }
