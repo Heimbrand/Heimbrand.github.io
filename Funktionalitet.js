@@ -3,12 +3,13 @@ const services = [
   { service: "Pälsvård", image: "Pälsvårdad.jpg", price: 200 },
   { service: "Umgås med kammen", image: "Redo för att kammas.jpg", price: 50 },
 ];
+const shoppingCart = [];
 
-const myServices = document.querySelector(".product-section");
+const cartSection = document.querySelector(".customerCart-section");
+const productSection = document.querySelector(".product-section");
+const addOrRemoveSection = document.querySelector(".addOrRemove-section");
 
 for (const service of services) {
-
-
   const productCard = document.createElement("div");
   productCard.classList.add("product-card");
 
@@ -24,7 +25,68 @@ for (const service of services) {
   productCard.appendChild(productImage);
   productCard.appendChild(productName);
   productCard.appendChild(productPrice);
-  myServices.appendChild(productCard);
-
-
+  productSection.appendChild(productCard);
 }
+
+function addToCart(product) {
+  shoppingCart.push(product);
+}
+
+function removeFromCart(productName) {
+  const indexToRemove = shoppingCart.findIndex(
+    (product) => product.service === productName
+  );
+
+  if (indexToRemove !== -1) {
+    shoppingCart.splice(indexToRemove, 1);
+    // Uppdatera gränssnittet för kundvagnen här om det behövs
+  } else {
+    console.log("Produkten finns inte i kundvagnen.");
+  }
+}
+
+const addFurCare = document.getElementById("add-pälsvård");
+const addNailClipping = document.getElementById("add-kloklippning");
+const addPlayTime = document.getElementById("add-umgåsMedKam");
+const removeFurCare = document.getElementById("remove-pälsvård");
+const removeNailClipping = document.getElementById("remove-kloklippning");
+const removePlayTime = document.getElementById("remove-umgåsMedKam");
+
+addFurCare.addEventListener("click", () => {
+  const addProduct = {
+    service: "Pälsvård",
+    image: "Pälsvårdad.jpg",
+    price: 200,
+  };
+  addToCart(addProduct);
+});
+addNailClipping.addEventListener("click", () => {
+  const addProduct = {
+    service: "Kloklippning",
+    image: "Kloklippning.jpg",
+    price: 150,
+  };
+  addToCart(addProduct);
+});
+addPlayTime.addEventListener("click", () => {
+  const addProduct = {
+    service: "Umgås med kammen",
+    image: "Redo för att kammas.jpg",
+    price: 50,
+  };
+  addToCart(addProduct);
+});
+removeFurCare.addEventListener("click", () => {
+ removeFromCart("Pälsvård");
+});
+
+removeNailClipping.addEventListener("click", () => {
+  
+  removeFromCart("Kloklippning");
+});
+
+removePlayTime.addEventListener("click", () => {
+ 
+  removeFromCart("Umgås med kammen");
+});
+console.log(shoppingCart);
