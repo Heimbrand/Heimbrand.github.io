@@ -64,12 +64,7 @@ footer.text-info div{
      height: auto;
   }
  
-  .img-container {
-    position: absolute;
-    bottom: 105px; 
-    left: 50%;
-    transform: translateX(-50%);
-  }
+ 
   body.bg-dark{
     background-color: #89B0AE;
   }
