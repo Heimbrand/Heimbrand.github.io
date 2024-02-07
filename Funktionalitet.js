@@ -4,11 +4,9 @@ const services = [
   { service: "Umgås med kammen", image: "Redo för att kammas.jpg", price: 50 },
 ];
 const shoppingCart = [];
-
 const cartSection = document.querySelector(".customerCart-section");
 const productSection = document.querySelector(".product-section");
 const addOrRemoveSection = document.querySelector(".addOrRemove-section");
-
 for (const service of services) {
   const productCard = document.createElement("div");
   productCard.classList.add("product-card");
@@ -27,11 +25,20 @@ for (const service of services) {
   productCard.appendChild(productPrice);
   productSection.appendChild(productCard);
 }
+function updateCartList(){
 
+  cartSection.innerHTML = "";
+  for (const item of shoppingCart) {
+   const productDiv = document.createElement("div");
+   productDiv.id = item.service.replace(/\s+/g, '-').toLowerCase(); 
+   productDiv.textContent = item.service;
+   cartSection.appendChild(productDiv);
+}
+}
 function addToCart(product) {
   shoppingCart.push(product);
+  updateCartList();
 }
-
 function removeFromCart(productName) {
   const indexToRemove = shoppingCart.findIndex(
     (product) => product.service === productName
@@ -39,19 +46,17 @@ function removeFromCart(productName) {
 
   if (indexToRemove !== -1) {
     shoppingCart.splice(indexToRemove, 1);
-    // Uppdatera gränssnittet för kundvagnen här om det behövs
+    updateCartList();
   } else {
     console.log("Produkten finns inte i kundvagnen.");
   }
 }
-
 const addFurCare = document.getElementById("add-pälsvård");
 const addNailClipping = document.getElementById("add-kloklippning");
 const addPlayTime = document.getElementById("add-umgåsMedKam");
 const removeFurCare = document.getElementById("remove-pälsvård");
 const removeNailClipping = document.getElementById("remove-kloklippning");
 const removePlayTime = document.getElementById("remove-umgåsMedKam");
-
 addFurCare.addEventListener("click", () => {
   const addProduct = {
     service: "Pälsvård",
@@ -77,16 +82,14 @@ addPlayTime.addEventListener("click", () => {
   addToCart(addProduct);
 });
 removeFurCare.addEventListener("click", () => {
- removeFromCart("Pälsvård");
+  removeFromCart("Pälsvård");
 });
 
 removeNailClipping.addEventListener("click", () => {
-  
   removeFromCart("Kloklippning");
 });
 
 removePlayTime.addEventListener("click", () => {
- 
   removeFromCart("Umgås med kammen");
 });
 console.log(shoppingCart);
