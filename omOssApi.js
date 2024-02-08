@@ -1,23 +1,21 @@
 
-
-const randomCatSection = document.querySelector(".randomCat-section");
+const contactSection = document.querySelector(".contact-section")
 
 async function randomCatImg() {
-    try {
-      const response = await fetch("https://cataas.com/api/cats?tags=cute");
-      const catData = await response.json();
-      console.log(catData);
-      
-       const catImgUrl = catData[0].url;
+  try {
+    const response = await fetch("https://cataas.com/api/cats?tags=cute");
+    const catData = await response.json();
+    console.log(catData);
 
-      const catGif = document.createElement("img");
-      catGif.src = catImgUrl;
-      randomCatSection.appendChild(catGif);
-  
-  
-    } catch (error) {
-      console.error("An error occurred:", error);
-    }
+    const randomCatIndex = Math.floor(Math.random() * catData.length);
+    const randomCat = catData[randomCatIndex];
+    const catImgUrl = `https://cataas.com/cat/${randomCat._id}`;
+
+    const catGif = document.createElement("img");
+    catGif.src = catImgUrl;
+    contactSection.appendChild(catGif);
+  } catch (error) {
+    console.error("An error occurred:", error);
   }
-     randomCatImg();
-  
+}
+randomCatImg();

@@ -49,6 +49,9 @@ footer.text-info div {
   margin: 10px;
   height: 925px;
 }
+.randomCat.section img{
+margin: 10px;
+}
 .rounded {
   max-width: 100%;
   margin-bottom: 20px;
