@@ -27,6 +27,7 @@ footer.text-info div {
   display: flex;
   
 }
+.modal-section,
 .product-section,
 .customerCart-section,
 .addOrRemove-section {
@@ -41,9 +42,7 @@ footer.text-info div {
   height: 925px;
   margin: 10px;
 }
-.addOrRemove-section img{
-  width: 200px;
-}
+
 
 .product-card{
   padding: 20px;
@@ -55,4 +54,41 @@ footer.text-info div {
 }
 .product-section img {
   width: 100px;
+}
+
+.btn-primary{
+  margin: 10px;
+  padding: 10px;
+  background-color: #b4adea !important;
+  border-color: black !important;
+  border: 3px solid #1d1e2c !important;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+  height: 50px;
+  
+}
+.card{
+
+  margin: 10px;
+  background-color: #b4adea !important;
+  border-color: black !important;
+  border: 3px solid #1d1e2c !important;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+}
+.btn-success{
+  margin: 10px;
+  padding: 10px;
+  border-color: black !important;
+  border: 3px solid #1d1e2c !important;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+}
+.btn-danger{
+  margin: 10px;
+  padding: 10px;
+  border-color: black !important;
+  border: 3px solid #1d1e2c !important;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
 }

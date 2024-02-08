@@ -7,6 +7,8 @@ const shoppingCart = [];
 const cartSection = document.querySelector(".customerCart-section");
 const productSection = document.querySelector(".product-section");
 const addOrRemoveSection = document.querySelector(".addOrRemove-section");
+
+
 for (const service of services) {
   const productCard = document.createElement("div");
   productCard.classList.add("product-card");
@@ -25,15 +27,14 @@ for (const service of services) {
   productCard.appendChild(productPrice);
   productSection.appendChild(productCard);
 }
-function updateCartList(){
-
+function updateCartList() {
   cartSection.innerHTML = "";
   for (const item of shoppingCart) {
-   const productDiv = document.createElement("div");
-   productDiv.id = item.service.replace(/\s+/g, '-').toLowerCase(); 
-   productDiv.textContent = `${item.service} ${item.price}:- `;
-   cartSection.appendChild(productDiv);
- }
+    const productDiv = document.createElement("div");
+    productDiv.id = item.service.replace(/\s+/g, "-").toLowerCase();
+    productDiv.textContent = `${item.service} ${item.price}:- `;
+    cartSection.appendChild(productDiv);
+  }
 }
 function addToCart(product) {
   shoppingCart.push(product);
@@ -93,3 +94,7 @@ removePlayTime.addEventListener("click", () => {
   removeFromCart("Umgås med kammen");
 });
 console.log(shoppingCart);
+
+
+
+
