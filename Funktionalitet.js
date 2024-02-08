@@ -31,9 +31,9 @@ function updateCartList(){
   for (const item of shoppingCart) {
    const productDiv = document.createElement("div");
    productDiv.id = item.service.replace(/\s+/g, '-').toLowerCase(); 
-   productDiv.textContent = item.service;
+   productDiv.textContent = `${item.service} ${item.price}:- `;
    cartSection.appendChild(productDiv);
-}
+ }
 }
 function addToCart(product) {
   shoppingCart.push(product);
