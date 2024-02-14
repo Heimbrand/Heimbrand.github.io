@@ -19,3 +19,5 @@ async function randomCatImg() {
   }
 }
 randomCatImg();
+
+console.log(randomCatImg);
