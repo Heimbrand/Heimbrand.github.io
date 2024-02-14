@@ -13,6 +13,8 @@ async function randomCatImg() {
 
     const catGif = document.createElement("img");
     catGif.src = catImgUrl;
+    catGif.setAttribute("alt", "Cute cat");
+    
     contactSection.appendChild(catGif);
   } catch (error) {
     console.error("An error occurred:", error);

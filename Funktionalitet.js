@@ -8,14 +8,14 @@ const cartSection = document.querySelector(".customerCart-section");
 const productSection = document.querySelector(".product-section");
 const addOrRemoveSection = document.querySelector(".addOrRemove-section");
 
-
 for (const service of services) {
   const productCard = document.createElement("div");
   productCard.classList.add("product-card");
 
   const productImage = document.createElement("img");
-  productImage.src = service.image;
 
+  productImage.src = service.image;
+  productImage.setAttribute("alt", "Cute cat");
   const productName = document.createElement("h3");
   productName.textContent = service.service;
 
@@ -94,7 +94,3 @@ removePlayTime.addEventListener("click", () => {
   removeFromCart("Umgås med kammen");
 });
 console.log(shoppingCart);
-
-
-
-
