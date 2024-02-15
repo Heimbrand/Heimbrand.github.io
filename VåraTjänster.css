@@ -3,43 +3,30 @@
 }
 .navbar {
   background-color: #b4adea;
-  padding: 20px !important;
-  border: 3px solid #1d1e2c;
-  border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
 }
 .navbar-nav .nav-link {
-  color: #f7ebec;
+  color: black;
 }
 footer {
   min-height: 70px;
   background-color: #6d597a;
-  border: 5px solid #1d1e2c;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
 }
 footer.text-info div {
-  color: #f7ebec;
+  color: black;
 }
-
-
 .modal-section,
 .product-section,
 .customerCart-section,
 .addOrRemove-section {
   flex: 1;
   padding: 20px;
-  width: 100%;
-  border: 3px solid #1d1e2c;
-  border-radius: 10px;
+  margin: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
-  margin-bottom: 20px;
+ 
   }
-@media only screen and (max-width: 600px) {
-  .container {
-    flex-direction: column;
-    
-  }
-}
+
 .container{
   display: flex;
   flex-direction: column;
@@ -55,11 +42,13 @@ footer.text-info div {
   
 }
 .product-section img {
-  width: 100px;
+  width: 100%;
+  max-height: 100%;
+ max-width: 100%; 
 }
 
-.btn-primary{
-  margin: 10px;
+ .btn-primary{
+   margin: 10px;
   padding: 10px;
   background-color: #b4adea !important;
   border-color: black !important;
@@ -68,10 +57,8 @@ footer.text-info div {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
   height: 50px;
   
-}
+} 
 .card{
-
-  
   background-color: #b4adea !important;
   border-color: black !important;
   border: 3px solid #1d1e2c !important;
