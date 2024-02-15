@@ -1,5 +1,5 @@
 
-const contactSection = document.querySelector(".contact-section")
+const contactSection = document.querySelector(".api-section")
 
 async function randomCatImg() {
   try {
