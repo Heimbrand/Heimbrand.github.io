@@ -31,7 +31,7 @@ footer.text-info div {
   display: flex;
   flex-direction: column;
   padding-bottom: 80px;
-}
+  }
 
 .product-card{
   padding: 20px;
